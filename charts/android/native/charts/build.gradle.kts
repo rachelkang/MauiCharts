@@ -25,20 +25,25 @@ android {
     }
 }
 
+// Create configuration for copyDependencies. Uncomment line below.
+configurations {
+    create("copyDependencies")
+}
+
 dependencies {
 
     // Add package dependency for binding library. Uncomment line below and add your dependency.
-    // implementation("dependency.name.goes.here")
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 
     // Copy dependencies for binding library. Uncomment line below and add your dependency.
-    // "copyDependencies"("dependency.name.goes.here")
+     "copyDependencies"("com.github.PhilJay:MPAndroidChart:v3.1.0")
 }
 
-// Copy dependencies for binding library. Uncomment code block below.
-//project.afterEvaluate {
-//    tasks.register<Copy>("copyDeps") {
-//        from(configurations["copyDependencies"])
-//        into("${projectDir}/build/outputs/deps")
-//    }
-//    tasks.named("preBuild") { finalizedBy("copyDeps") }
-//}
+// Copy dependencies for binding library. Uncomment code blocks below.
+project.afterEvaluate {
+    tasks.register<Copy>("copyDeps") {
+        from(configurations["copyDependencies"])
+        into("${projectDir}/build/outputs/deps")
+    }
+    tasks.named("preBuild") { finalizedBy("copyDeps") }
+}

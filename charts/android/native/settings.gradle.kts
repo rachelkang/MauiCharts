@@ -12,9 +12,9 @@ dependencyResolutionManagement {
         mavenCentral()
 
         // Add repository here, e.g.
-        // maven {
-        //    url = uri("urlGoesHere")
-        // }
+        maven {
+            url = uri("https://jitpack.io")
+        }
     }
 }
 

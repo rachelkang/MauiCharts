@@ -1,34 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiSample"
              x:Class="MauiSample.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
+    <ScrollView x:Name="myScrollView">
+        <VerticalStackLayout x:Name="myStackLayout"
             Padding="30,0"
             Spacing="25">
-            <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
 
-            <Label
-                x:Name="chartsSampleLabel"
-                Text="Hello, World!"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
-
-            <Label
-                Text="Create new bindings using Native Library Interop"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2" />
-
-            <Button
-                Text="Get Started" 
-                SemanticProperties.Hint="Navigates to getting started documentation"
-                Clicked="OnDocsButtonClicked"
-                HorizontalOptions="Fill" />
+            <local:MauiPieChart WidthRequest="300" HeightRequest="300">
+                <local:MauiPieChart.Slices>
+                    <local:PieChartSlice Name="Dave's fans" Count="1" Color="Magenta" />
+                    <local:PieChartSlice Name="Rachel's fans" Count="5" Color="Cyan" />
+                    <local:PieChartSlice Name="Maddy's fans" Count="10" Color="Blue" />
+                    <local:PieChartSlice Name="Beth's fans" Count="20" Color="Purple" />
+                </local:MauiPieChart.Slices>
+            </local:MauiPieChart>
+            
         </VerticalStackLayout>
     </ScrollView>
 

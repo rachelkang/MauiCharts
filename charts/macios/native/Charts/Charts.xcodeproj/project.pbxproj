@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		83E34F572C21CB2B008AA950 /* Charts.h in Headers */ = {isa = PBXBuildFile; fileRef = 83E34F562C21CB2B008AA950 /* Charts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83E34F5E2C21CC53008AA950 /* DotnetCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E34F5D2C21CC53008AA950 /* DotnetCharts.swift */; };
+		83E34F612C45887A008AA950 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 83E34F602C45887A008AA950 /* DGCharts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E34F612C45887A008AA950 /* DGCharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +83,9 @@
 			dependencies = (
 			);
 			name = Charts;
+			packageProductDependencies = (
+				83E34F602C45887A008AA950 /* DGCharts */,
+			);
 			productName = Charts;
 			productReference = 83E34F532C21CB2B008AA950 /* Charts.framework */;
 			productType = "com.apple.product-type.framework";
@@ -109,6 +114,9 @@
 				Base,
 			);
 			mainGroup = 83E34F492C21CB2B008AA950;
+			packageReferences = (
+				83E34F5F2C45887A008AA950 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 83E34F542C21CB2B008AA950 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -369,6 +377,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		83E34F5F2C45887A008AA950 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		83E34F602C45887A008AA950 /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83E34F5F2C45887A008AA950 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83E34F4A2C21CB2B008AA950 /* Project object */;
 }
