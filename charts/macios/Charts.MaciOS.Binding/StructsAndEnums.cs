@@ -1,0 +1,3 @@
+namespace Charts.MaciOS.Binding {
+
+}
