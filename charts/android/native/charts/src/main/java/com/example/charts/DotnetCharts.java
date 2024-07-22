@@ -9,6 +9,7 @@ import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.view.View;
 
@@ -42,6 +43,10 @@ public class DotnetCharts {
         pieChart.getDescription().setEnabled(false);
         pieChart.setRotationAngle(270);
 
+        pieChart.setEntryLabelTextSize(18f);
+        pieChart.setEntryLabelColor(Color.WHITE);
+        pieChart.setEntryLabelTypeface(Typeface.DEFAULT_BOLD);
+
         return pieChart;
     }
 
@@ -65,10 +70,11 @@ public class DotnetCharts {
         dataSet.setColors(colors);
 
         PieData pieData = new PieData(dataSet);
-//        pieData.setValueFormatter(new com.github.mikephil.charting.formatter.DefaultValueFormatter(1));
+//        pieData.setValueFormatter(new com.github.mikephil.charting.formatter.DefaultValueFormatter(0));
 
-        pieData.setValueTextSize(11f);
+        pieData.setValueTextSize(18f);
         pieData.setValueTextColor(Color.WHITE);
+        pieData.setValueTypeface(Typeface.DEFAULT_BOLD);
 
         pieChart.setData(pieData);
         pieChart.highlightValues(null);

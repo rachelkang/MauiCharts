@@ -51,8 +51,12 @@ public class DotnetCharts : NSObject {
         else {
             dataSet.colors = ChartColorTemplates.material()
         }
+        
+        let data = PieChartData(dataSet: dataSet)
+        data.setValueFont(.systemFont(ofSize: 18, weight: .bold))
+        data.setValueTextColor(.white)
 
-        pieChart.data = PieChartData(dataSet: dataSet)
+        pieChart.data = data
         pieChart.notifyDataSetChanged()
     }
 }

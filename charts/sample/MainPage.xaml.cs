@@ -23,10 +23,10 @@ public partial class MainPage : ContentPage
 		// {
 		// 	Slices = new List<PieChartSlice>
 		// 	{
-		// 		new PieChartSlice { Name = "Dave's fans", Count = 1, Color = Colors.Magenta },
-		// 		new PieChartSlice { Name = "Rachel's fans", Count = 5, Color = Colors.Cyan },
-		// 		new PieChartSlice { Name = "Maddy's fans", Count = 10, Color = Colors.Blue },
-		// 		new PieChartSlice { Name = "Beth's fans", Count = 20, Color = Colors.Purple }
+		// 		new PieChartSlice { Name = "Dave's fans", Count = 1 },
+		// 		new PieChartSlice { Name = "Rachel's fans", Count = 5 },
+		// 		new PieChartSlice { Name = "Maddy's fans", Count = 10 },
+		// 		new PieChartSlice { Name = "Beth's fans", Count = 20 }
 		// 	}
 		// };
 		// pieChart.WidthRequest = 300;
@@ -45,11 +45,26 @@ public class PieChartSlice
 	public string Name { get; set; } = string.Empty;
 
 	public int Count { get; set; }
+	
+    public Color Color
+    {
+        get
+        {
+            return _color ??= GenerateRandomColor();
+        }
+        set
+        {
+            _color = value;
+        }
+    }
 
-	static Random random = new Random();
-	static Color randomColor = new Color((float)random.NextDouble(), (float)random.NextDouble(), (float)random.NextDouble());
+	private Color? _color = null;
 
-	public Color Color { get; set; } = randomColor;
+    private Color GenerateRandomColor()
+    {
+        Random random = new Random();
+        return new Color(random.Next(256), random.Next(256), random.Next(256));
+    }
 }
 
 public partial class MauiPieChartHandler

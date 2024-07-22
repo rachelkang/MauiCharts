@@ -2,19 +2,26 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MauiSample"
-             x:Class="MauiSample.MainPage">
+             x:Class="MauiSample.MainPage"
+             Background="Black">
 
     <ScrollView x:Name="myScrollView">
         <VerticalStackLayout x:Name="myStackLayout"
             Padding="30,0"
             Spacing="25">
 
+            <Label Text=".NET MAUI PM Team Fanbase"
+                   FontSize="24"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
             <local:MauiPieChart WidthRequest="300" HeightRequest="300">
                 <local:MauiPieChart.Slices>
-                    <local:PieChartSlice Name="Dave's fans" Count="1" Color="Magenta" />
-                    <local:PieChartSlice Name="Rachel's fans" Count="5" Color="Cyan" />
-                    <local:PieChartSlice Name="Maddy's fans" Count="10" Color="Blue" />
-                    <local:PieChartSlice Name="Beth's fans" Count="20" Color="Purple" />
+                    <local:PieChartSlice Name="Dave's fans" Count="1" />
+                    <local:PieChartSlice Name="Rachel's fans" Count="5" />
+                    <local:PieChartSlice Name="Maddy's fans" Count="7" />
+                    <local:PieChartSlice Name="Beth's fans" Count="10" />
                 </local:MauiPieChart.Slices>
             </local:MauiPieChart>
             

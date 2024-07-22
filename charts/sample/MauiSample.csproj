@@ -69,4 +69,12 @@
         <ProjectReference Include="..\android\Charts.Android.Binding\Charts.Android.Binding.csproj" />
     </ItemGroup>
 
+	<!-- Reference the Android binding dependencies -->
+	<ItemGroup Condition="$(TargetFramework.Contains('android'))">
+        <AndroidLibrary Include="..\android\native\charts\bin\Release\net8.0-android\outputs\deps\MPAndroidChart-v3.1.0.aar">
+            <Bind>false</Bind>
+            <Visible>false</Visible>
+        </AndroidLibrary>
+    </ItemGroup>
+
 </Project>
