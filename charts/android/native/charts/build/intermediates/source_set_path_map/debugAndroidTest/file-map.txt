@@ -1,5 +1,0 @@
-com.example.charts.test.charts-androidTest-0 /Users/rachelkang/GitHub/MauiCharts/charts/android/native/charts/build/generated/res/resValues/androidTest/debug
-com.example.charts.test.charts-mergeDebugAndroidTestResources-1 /Users/rachelkang/GitHub/MauiCharts/charts/android/native/charts/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
-com.example.charts.test.charts-mergeDebugAndroidTestResources-2 /Users/rachelkang/GitHub/MauiCharts/charts/android/native/charts/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
-com.example.charts.test.charts-merged_res-3 /Users/rachelkang/GitHub/MauiCharts/charts/android/native/charts/build/intermediates/merged_res/debugAndroidTest
-com.example.charts.test.charts-packaged_res-4 /Users/rachelkang/GitHub/MauiCharts/charts/android/native/charts/build/intermediates/packaged_res/debug
